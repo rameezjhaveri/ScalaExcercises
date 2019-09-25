@@ -33,5 +33,4 @@ object Iteration4 extends App {
       )
   }
   fizzBuzz("Fizz", "Buzz", 15)
-
 }

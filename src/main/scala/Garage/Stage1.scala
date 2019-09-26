@@ -6,16 +6,16 @@ object Stage1 extends App {
   def name:String
 }
   class employee(fullName:String, employeeID:String) extends person {
-    def this(fullName:String) = this(fullName, (s"E${(fullName.substring(0,2))+
-      scala.util.Random.nextInt(10)+scala.util.Random.nextInt(10)}"))
+    def this(fullName:String) = this(fullName, (s"E${(fullName.toUpperCase.substring(0,3))+
+      scala.util.Random.nextInt(10)+scala.util.Random.nextInt(10)+scala.util.Random.nextInt(10)}"))
     val name: String = fullName
-    override def toString: String = s"(Employee: $fullName, $employeeID)"
+    override def toString: String = s"(Employee -  Name:$fullName, ID:$employeeID)"
   }
   class customer(fullName:String, customerID:String) extends person {
-    def this(fullName: String) = this(fullName, (s"C${(fullName.substring(0, 2))+
-      scala.util.Random.nextInt(10)+scala.util.Random.nextInt(10)}"))
+    def this(fullName: String) = this(fullName, (s"C${(fullName.toUpperCase.substring(0, 3))+
+      scala.util.Random.nextInt(10)+scala.util.Random.nextInt(10)+scala.util.Random.nextInt(10)}"))
     val name: String = fullName
-    override def toString: String = s"(Employee: $fullName, $customerID)"
+    override def toString: String = s"(Customer -  Name:$fullName, ID:$customerID)"
   }
 
   abstract case class vehicle() {
@@ -35,4 +35,8 @@ object Stage1 extends App {
     val year=bikeYear
     override def toString: String = s"(Car: $bikeModel, $bikeReg, $bikeYear)"
   }
+  println(new employee("rameez", "ERAM001"))
+  println(new customer("rameez"))
+
+
 }

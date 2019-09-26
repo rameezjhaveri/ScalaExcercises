@@ -25,12 +25,12 @@ object TadasBrokenKeyboardSolution extends App {
     )
   }
 
-  println("enter number of keyboards")
-  val numberOfkeyboards = readLine().toInt
-  for(index <- 1 to numberOfkeyboards) {
-    println("enter available keys")
-    println("longest word: " + longestWord(readLine()))
-  }
+//  println("enter number of keyboards")
+//  val numberOfkeyboards = readLine().toInt
+//  for(index <- 1 to numberOfkeyboards) {
+//    println("enter available keys")
+//    println("longest word: " + longestWord(readLine()))
+//  }
 
 }
 

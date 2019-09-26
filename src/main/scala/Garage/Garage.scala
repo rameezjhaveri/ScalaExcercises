@@ -41,11 +41,15 @@ class Garage() {
 //    println("Total Cost: £" + totalCost)
     totalCost
   }
-//  METHODS NOT FUNCTIONAL YET
-//  def removeVehicleById(Id:String):Any={
-//    val ID =Id.toUpperCase
-//  }
-//  def removeVehicleByModel(carModel:String):Any={
-//    val model = carModel.toUpperCase
-//  }
+
+  def removeVehicleById(Id:String):Any={
+    val ID =Id.toUpperCase
+    vehicleList = vehicleList.filterNot(vehicle=>vehicle.reg == ID)
+//    println(vehicleList)
+  }
+  def removeVehicleByModel(carModel:String):Any={
+    val model = carModel.toUpperCase
+    vehicleList = vehicleList.filterNot(vehicle=>vehicle.model == model)
+//    println(vehicleList)
+  }
 }

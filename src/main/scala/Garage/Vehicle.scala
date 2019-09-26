@@ -5,4 +5,5 @@ abstract class Vehicle(){
   def reg: String
   def year: Int
   def brokenParts: Int
+  var timeToFix:Int
 }

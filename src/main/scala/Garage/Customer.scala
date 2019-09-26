@@ -7,3 +7,6 @@ class Customer(fullName:String, customerID:String) extends Person {
   val name: String = fullName
   override def toString: String = s"(Customer -  Name:$fullName, ID:$customerID)"
 }
+
+//IMPLEMENT BETTER ID GENERATING SYSTEM
+//USE STATIC CLASS WITH METHOD AND AUTO INCREMENT

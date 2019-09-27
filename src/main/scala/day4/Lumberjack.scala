@@ -8,18 +8,20 @@ object Lumberjack extends App {
     var newGrid:List[Int] = grid.map{
       case (number) =>
         if (number == minValue && logsLeft>0) {
+          logsLeft -= 1
           number + 1
-          logsLeft - 1
         }
         else number
         }
-    println("logsLeft: "+logsLeft)
-    println("minValue: "+minValue)
-    println("grid: " + newGrid)
+    println("-----------")
+    println(newGrid(0)+ " " + newGrid(1)+ " " +newGrid(2))
+    println(newGrid(3)+ " " + newGrid(4)+ " " + newGrid(5))
+    println(newGrid(6)+ " " + newGrid(7)+ " " + newGrid(8))
+    println("-----------")
     if (logsLeft > 0) logPlacement(gridSize, logsLeft, newGrid)
           else grid
   }
 
 
-  logPlacement(3,7,List(1,1,1,2,1,3,1,4,1))
+  logPlacement(3,15,List(1,1,1,2,1,3,1,4,1))
 }

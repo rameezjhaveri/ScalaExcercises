@@ -6,16 +6,16 @@ object Main extends App {
     val employee1 = new Employee("Rameez", "ERAM001")
     val employee2 = new Employee("Batman")
 
-    val myCar1 = new Car("Audi", "FG60DKA", 2019)
-    val myCar2 = new Car("BMW", "FG60DKB", 2018)
-    val myCar3 = new Car("VW", "FG60DKC", 2017)
+    val car1 = new Car("Audi", "FG60DKA", 2019)
+    val car2 = new Car("BMW", "FG60DKB", 2018)
+    val car3 = new Car("VW", "FG60DKC", 2017)
 
-  garage.addVehicle(myCar1)
-  garage.addVehicle(myCar2)
-  garage.addVehicle(myCar3)
+  garage.addVehicle(car1)
+  garage.addVehicle(car2)
+  garage.addVehicle(car3)
   garage.registerEmployee(employee1)
   garage.registerEmployee(employee2)
-  println(garage.vehicleList)
+//  println(garage.vehicleList)
 
 //garage.viewGarageContents
   //  println(garage.registeredEmployeesList)
@@ -27,7 +27,7 @@ object Main extends App {
 //  println(garage.isOpen)
 //  garage.openGarage()
 //  println(garage.isOpen)
-//garage.fixingVehicle(5)
-//garage.calculateBill(5)
+//garage.fixingVehicle(car1)
+garage.calculateBill(car1)
 
 }

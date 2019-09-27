@@ -6,7 +6,7 @@ class Car (carModel:String, carReg:String, carYear:Int) extends Vehicle {
   val year=carYear
   var timeToFix: Int = _
   def brokenParts=(1 + scala.util.Random.nextInt(10))
-  override def toString: String = s"(Model:$model Reg:$carReg, Year:$year)"
+  override def toString: String = s"($model, Reg:$carReg, Year:$year)"
 }
 
 

@@ -36,14 +36,14 @@ object MorseCode extends App {
   }
 
 
-  def englishToMorse(english:String):Unit= {
-    var morse = ""
-    val morseWords = english.split(" ").toList.map { morse =>
-      //      morseCodeMap.find()
-      //      morse += morseCodeMap(english)}
-      morse
-    }
-  }
+//  def englishToMorse(english:String):Unit= {
+//    var morse = ""
+//    val morseWords = english.split(" ").toList.map { morse =>
+//      //      morseCodeMap.find()
+//      //      morse += morseCodeMap(english)}
+//      morse
+//    }
+//  }
 
   morseToEnglish(".... /. /.-.. /.-.. /---")
 }

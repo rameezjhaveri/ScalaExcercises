@@ -9,12 +9,11 @@ object brokenKeyboard extends App {
     val dictionary = html.mkString.toList
       html.close()
 //    println(dictionary)
-  def anagramSolver(lines:Int,text:String):Unit= {
-    dictionary.filter(_ match ["abc"]+)
+//  def anagramSolver(lines:Int,text:String):Unit= {
+//    dictionary.filter(_ match ["abc"]+)
 //    val userWord = new Regex("[text]+")
 //    println((userWord findAllIn dictionary).mkString(","))
 
 
-  }
-  anagramSolver(1,"hello")
+//  anagramSolver(1,"hello")
 }

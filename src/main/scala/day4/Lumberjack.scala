@@ -13,11 +13,14 @@ object Lumberjack extends App {
         }
         else number
         }
+
     println("-----------")
     println(newGrid(0)+ " " + newGrid(1)+ " " +newGrid(2))
     println(newGrid(3)+ " " + newGrid(4)+ " " + newGrid(5))
     println(newGrid(6)+ " " + newGrid(7)+ " " + newGrid(8))
     println("-----------")
+
+
     if (logsLeft > 0) logPlacement(gridSize, logsLeft, newGrid)
           else grid
   }

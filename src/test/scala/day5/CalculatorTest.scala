@@ -1,4 +1,4 @@
-import day5.calculator.Calculator
+package day5
 import resources.BaseTestingClass
 
 class CalculatorTest extends BaseTestingClass {

@@ -1,4 +1,4 @@
-package day5.calculator
+package day5
 
 object Calculator extends App {
   def sum(number1:Int, number2:Int, operator:String):Any= (operator) match{

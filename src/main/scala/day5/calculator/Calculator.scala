@@ -5,5 +5,6 @@ object Calculator extends App {
     case "+" => number1 + number2
     case "-" => number1 - number2
     case "*" => number1 * number2
+    case "/" => number1 / number2
   }
 }

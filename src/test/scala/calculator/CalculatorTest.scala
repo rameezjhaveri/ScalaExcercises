@@ -13,5 +13,10 @@ def calculator(number1:Int):Any=number1*2
   test("2+2 should return 4"){
     assert(calculator(2)==4)
   }
+
+  test("7+8 should return 15"){
+    assert(calculator(7)==15)
+  }
+
 }
 

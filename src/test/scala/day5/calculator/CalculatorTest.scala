@@ -22,5 +22,9 @@ class CalculatorTest extends BaseTestingClass {
   test("7*3 should return 21"){
     assert(Calculator.sum(7,3,"*")==21)
   }
+
+  test("15/5 should return 3"){
+    assert(Calculator.sum(15,5,"/")==3)
+  }
 }
 

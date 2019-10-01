@@ -6,9 +6,18 @@ object Main extends App {
     val employee1 = new Employee("Rameez", "ERAM001")
     val employee2 = new Employee("Batman")
 
-    val car1 = new Car("Audi", "FG60DKA", 2019)
-    val car2 = new Car("BMW", "FG60DKB", 2018)
-    val car3 = new Car("VW", "FG60DKC", 2017)
+    val car1 = new Car("AUDI", "AA70AAA", 2019)
+    val car2 = new Car("BMW", "AA70AAB", 2018)
+    val car3 = new Car("VW", "AA70AAC", 2014)
+    val car4 = new Car("AUDI", "AA70AAD", 2018)
+    val car5 = new Car("TOYOTA", "AA70AAE", 2010)
+    val car6 = new Car("BMW", "AA70AAF", 2016)
+    val car7 = new Car("BMW", "AA70AAG", 2016)
+    val car8 = new Car("VW", "AA70AAH", 2015)
+    val car9 = new Car("AUDI", "AA70AAI", 2018)
+    val car10 = new Car("SEAT", "AA70AAJ", 2013)
+    val car11 = new Car("TESLA", "AA70AAK", 2015)
+    val car12 = new Car("RENAULT", "AA70AAL", 2011)
 
   garage.addVehicle(car1)
   garage.addVehicle(car2)
@@ -18,7 +27,7 @@ object Main extends App {
 //  println(garage.vehicleList)
 
 //garage.viewGarageContents
-  //  println(garage.registeredEmployeesList)
+//  println(garage.registeredEmployeesList)
 //    garage.removeVehicleById("FG60DKB")
 //  garage.removeVehicleByModel("AUDI")
 //  println(garage.vehicleList)`

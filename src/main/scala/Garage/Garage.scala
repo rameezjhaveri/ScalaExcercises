@@ -1,4 +1,6 @@
 package Garage
+import Garage.DBConnection.getConnection
+import org.mongodb.scala.bson.collection.immutable.Document
 
 import scala.collection.mutable.ListBuffer
 
@@ -22,6 +24,17 @@ class Garage() {
 
   def addVehicle(vehicle:Vehicle):Unit={
     vehicleList.addOne(vehicle)
+//    getConnection
+//    val car:Vehicle = Document(
+//      vehicle
+//    )
+
+    //    val car: Document = Document (
+//      "Model" -> "Audi",
+//      "Reg" -> "AA60AAA",
+//      "Year" -> "2019"
+//    )
+
   }
 
   def registerEmployee(employee: Employee):Unit={

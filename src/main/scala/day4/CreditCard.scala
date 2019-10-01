@@ -13,11 +13,11 @@ object CreditCard extends App {
     }.sum
     newCardNumber
   }
+
     def isValid(cardNumber:Long):Any= (cardNumber) match {
       case _ if (cardNumber % 10 == 0) => println("Card is Valid")
       case _ => println("Card is invalid")
     }
 
-  luhnsChecker(49927398716L)
   isValid(luhnsChecker(49927398716L))
 }

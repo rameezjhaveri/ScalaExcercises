@@ -5,26 +5,25 @@ import scala.concurrent._
 import ExecutionContext.Implicits.global
 
 object PrimeNumber extends App {
-  var lowerLimit = 1000000
-  val upperLimit = 3000000
+  val lowerLimit = 99999
+  val upperLimit = 1000000
   var listToCheck = (lowerLimit to upperLimit by 2).toList
-  var divisor = 2
+  var divisor = 3
   val numberOfThreads = 4
-
   def sleep(time:Long) {Thread.sleep(time)}
 
   def time[R](block: => R): R = {
-    val t0 = System.currentTimeMillis()
+    val startTime = System.currentTimeMillis()
     val result = block
-    val t1 = System.currentTimeMillis()
-    println("Elapsed time: " + (t1 - t0) + "ms")
+    val endTime = System.currentTimeMillis()
+    println("Elapsed time: " + (endTime - startTime) + "ms")
     result
   }
 
   def primeFinder(max:Int):Any= {
-    if (divisor*divisor < max) {
-      divisor += 1
+    if (divisor*divisor <= upperLimit) {
       listToCheck = listToCheck.filter(_ % divisor != 0)
+      divisor += 1
       primeFinder(upperLimit)
     }
     else println(listToCheck.length)
@@ -33,6 +32,6 @@ object PrimeNumber extends App {
   def concurrency(numberOfThreads:Int):Any= {
   }
 
-  time {primeFinder(3000000)}
+  time {primeFinder(1)}
   sleep(500)
 }

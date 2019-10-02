@@ -12,7 +12,7 @@ object DBConnection extends App {
     myDatabase
   }
 
-  def getConnectionCollection(database: MongoDatabase, collection:String):Any ={
+  def getConnectionCollection(database: MongoDatabase, collection:String):MongoCollection[Document] ={
     val myCollection = database.getCollection(collection)
     myCollection
   }

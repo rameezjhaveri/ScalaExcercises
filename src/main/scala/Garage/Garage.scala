@@ -1,6 +1,13 @@
 package Garage
 import Garage.DBConnection._
+import com.mongodb.DBObject
 import org.mongodb.scala.bson.collection.immutable.Document
+import spray.json._
+import org.mongodb.scala._
+import org.mongodb.scala.model.Filters._
+import org.mongodb.scala.model.Updates._
+import scala.concurrent.ExecutionContext.Implicits.global
+import scala.util.{Failure, Success}
 import scala.collection.mutable.ListBuffer
 
 class Garage() {
@@ -23,14 +30,32 @@ class Garage() {
 
   def addVehicle(vehicle:Vehicle):Unit={
     vehicleList.addOne(vehicle)
+    val carDoc = Document.
+
+      vehicle.toString.parseJson
+    val doc: Document = Document(
+      "_id" -> 1,
+      "name" -> "MongoDB",
+      "type" -> "database",
+      "count" -> 1,
+      "info" -> Document(
+        "x" -> 203,
+        "y" -> 102)
+    )
+
     val client = getClient("mongodb://localhost")
     val db = getConnectionDatabase(client,"garage")
     val collection = getConnectionCollection(db, "car")
-    val car: Document = Document (
-      "Model" -> "Audi",
-      "Reg" -> "AA60AAA",
-      "Year" -> "2019"
-    )
+
+    def addDocument(doc: Document) = {
+      collection.insertOne(doc)
+        .subscribe(new Observer[Completed] {
+          override def onNext(result: Completed): Unit = println("Inserted")
+          override def onError(e: Throwable): Unit = println(s"Failed ${e.getStackTrace.toString}")
+          override def onComplete(): Unit = println("Completed")
+        })
+    }
+
     closeConnection(client)
   }
 

@@ -19,7 +19,8 @@ object Main extends App {
 //    val car11 = new Car("TESLA", "AA70AAK", 2015)
 //    val car12 = new Car("RENAULT", "AA70AAL", 2011)
 
-  garage.addVehicle(car1)
+  println(car1.toString)
+//  garage.addVehicle(car1)
 //  garage.addVehicle(car2)
 //  garage.addVehicle(car3)
 //  garage.registerEmployee(employee1)

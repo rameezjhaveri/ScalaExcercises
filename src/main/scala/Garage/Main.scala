@@ -6,7 +6,7 @@ object Main extends App {
 //    val employee1 = new Employee("Rameez", "ERAM001")
 //    val employee2 = new Employee("Batman")
 
-    val car1 = new Car("AUDI", "AA70AAA", 2019)
+    val car1 = new Car("IT WORKS!!!", "AA70AAA", 2019)
 //    val car2 = new Car("BMW", "AA70AAB", 2018)
 //    val car3 = new Car("VW", "AA70AAC", 2014)
 //    val car4 = new Car("AUDI", "AA70AAD", 2018)
@@ -20,7 +20,7 @@ object Main extends App {
 //    val car12 = new Car("RENAULT", "AA70AAL", 2011)
 
   println(car1.toString)
-//  garage.addVehicle(car1)
+  garage.addVehicle(car1)
 //  garage.addVehicle(car2)
 //  garage.addVehicle(car3)
 //  garage.registerEmployee(employee1)

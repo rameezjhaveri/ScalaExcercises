@@ -21,4 +21,6 @@ object DBConnection extends App {
     mongoClient.close()
   }
 
+
+
 }

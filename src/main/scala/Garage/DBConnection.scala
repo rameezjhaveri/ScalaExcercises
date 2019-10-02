@@ -1,26 +1,21 @@
 package Garage
 
+
 import org.mongodb.scala._
 object DBConnection extends App {
 
   def getClient(address:String):MongoClient= {
-    val mongoClient: MongoClient = MongoClient(address)
-    mongoClient
+    MongoClient(address)
   }
   def getConnectionDatabase(mongoClient:MongoClient, database:String):MongoDatabase = {
-    val myDatabase: MongoDatabase = mongoClient.getDatabase(database)
-    myDatabase
-  }
+    mongoClient.getDatabase(database)
+    }
 
   def getConnectionCollection(database: MongoDatabase, collection:String):MongoCollection[Document] ={
-    val myCollection = database.getCollection(collection)
-    myCollection
+    database.getCollection(collection)
   }
 
-  def closeConnection(mongoClient:MongoClient): Unit ={
+  def closingConnection(mongoClient:MongoClient): Unit ={
     mongoClient.close()
   }
-
-
-
 }

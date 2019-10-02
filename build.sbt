@@ -10,3 +10,4 @@ libraryDependencies += "org.slf4j" % "slf4j-log4j12" % "1.7.25"
 libraryDependencies += "org.mongodb.scala" %% "mongo-scala-driver" % "2.7.0"
 libraryDependencies += "io.spray" %% "spray-json" % "1.3.5"
 libraryDependencies += "org.mongodb" % "mongo-java-driver" % "3.11.0"
+libraryDependencies += "org.mockito" %% "mockito-scala" % "1.5.18" % Test

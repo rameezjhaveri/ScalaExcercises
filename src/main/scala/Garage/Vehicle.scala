@@ -6,4 +6,5 @@ abstract class Vehicle(){
   def year: Int
   def brokenParts: Int
   var timeToFix:Int
+  var costToFix:Int
 }

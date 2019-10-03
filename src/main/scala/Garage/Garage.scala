@@ -32,7 +32,7 @@ class Garage() {
   }
 
   def addVehicle(vehicle:Vehicle):Unit={
-    fixingVehicleTime(vehicle:Vehicle)
+    timeToFix(vehicle:Vehicle)
     calculateBill(vehicle:Vehicle)
     val carDoc:Document = Document(BsonDocument.parse(vehicle.toString))
     addDocument(carDoc,openConnection("car"))
@@ -45,7 +45,7 @@ class Garage() {
     closeConnection()
   }
 
-  def fixingVehicleTime(vehicle: Vehicle):Unit={
+  def timeToFix(vehicle: Vehicle):Unit={
     val repairTime = List.fill(vehicle.brokenParts)(1).map(part =>
       part * (1 + scala.util.Random.nextInt(6))).sum
     vehicle.timeToFix=repairTime
@@ -58,6 +58,11 @@ class Garage() {
   val labourCost = (fixingTime * hourlyRate)
   val totalCost = partCosts + labourCost
     vehicle.costToFix=totalCost
+  }
+
+  def fixVehicleByReg(regNo:String):Unit={
+    updateField(regNo,openConnection("car"))
+    closeConnection()
   }
 
   def findVehicleById(regNo: String): Unit = {

@@ -2,8 +2,11 @@ package Garage
 
 import scala.concurrent.ExecutionContext.Implicits.global
 import org.mongodb.scala.{Document, _}
+import org.mongodb.scala.model._
 import org.mongodb.scala.model.Filters._
+import org.mongodb.scala.model.Updates._
 import scala.util.{Failure, Success}
+
 
 object DBMethods extends App {
 
@@ -51,6 +54,23 @@ object DBMethods extends App {
 
   def getAllGarage(collection: MongoCollection[Document]):Unit={
     collection.find().foreach(println)
+    Thread.sleep(1000)
+  }
+
+  def updateField(regNo:String,collection: MongoCollection[Document]):Unit = {
+    collection.updateOne(equal("Reg",regNo),set("BrokenParts",0)).headOption().onComplete{
+      case Success(value) => println()
+      case Failure(error) => error.printStackTrace()
+    }
+    collection.updateOne(equal("Reg",regNo),set("timeToFix",0)).headOption().onComplete{
+      case Success(value) =>
+      case Failure(error) => error.printStackTrace()
+    }
+    collection.updateOne(equal("Reg",regNo),set("costToFix",0)).headOption().onComplete{
+      case Success(value) => println(s"The value has been updated to $value")
+      case Failure(error) => error.printStackTrace()
+    }
+
     Thread.sleep(1000)
   }
 
